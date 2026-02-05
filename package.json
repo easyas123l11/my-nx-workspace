@@ -2,7 +2,11 @@
   "name": "@angular-demo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "npx nx build angular-demo --configuration=production",
+    "build:angular-demo": "npx nx build angular-demo --configuration=production",
+    "start": "npx nx serve angular-demo"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "21.1.2",
