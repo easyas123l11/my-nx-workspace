@@ -3,7 +3,7 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist/apps/angular-demo" }
+      "config": { "distDir": "dist/apps/angular-demo/browser" }
     }
   ],
   "rewrites": [

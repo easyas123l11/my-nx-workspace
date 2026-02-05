@@ -8,8 +8,8 @@ Steps to deploy `angular-demo` from this repo to Vercel (free):
 4. In the project settings set:
    - Framework Preset: Other
    - Build Command: `npm run build`
-   - Output Directory: `dist/apps/angular-demo`
-5. Deploy. Vercel will run `npm run build` which runs `npx nx build angular-demo --configuration=production` and publish the `dist/apps/angular-demo` folder.
+   - Output Directory: `dist/apps/angular-demo/browser`
+5. Deploy. Vercel will run `npm run build` which runs `npx nx build angular-demo --configuration=production` and publish the `dist/apps/angular-demo/browser` folder.
 
 Optional: CLI deploy (for a one-off):
 
