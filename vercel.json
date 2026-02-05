@@ -6,7 +6,7 @@
       "config": { "distDir": "dist/apps/angular-demo" }
     }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
