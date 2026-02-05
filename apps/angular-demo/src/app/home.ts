@@ -24,7 +24,7 @@ import { CommonModule } from '@angular/common';
         text-align: center;
         font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
           'Helvetica Neue', Arial;
-        color: #111827;
+        color: var(--app-text);
       }
       h1 {
         font-size: 1.75rem;

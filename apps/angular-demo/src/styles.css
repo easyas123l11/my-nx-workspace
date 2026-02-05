@@ -1,1 +1,84 @@
+/* Global theme variables controlled by data-theme on <html> */
+:root[data-theme='dark'] {
+  --app-bg: #071123;
+  --app-text: #e6eef8;
+  --muted: #9fb0c9;
+  --card-bg: #071a2a;
+  --card-border: rgba(230,238,248,0.04);
+  --badge-bg: rgba(230,238,248,0.06);
+  --badge-text: #e6eef8;
+  --link-bg: rgba(12, 74, 110, 0.12);
+  --link-text: #7dd3fc;
+}
+
+:root[data-theme='light'] {
+  --app-bg: #f8fafc;
+  --app-text: #0f172a;
+  --muted: #64748b;
+  --card-bg: #ffffff;
+  --card-border: rgba(2,6,23,0.04);
+  --badge-bg: #eef2ff;
+  --badge-text: #0f172a;
+  --link-bg: #ecfeff;
+  --link-text: #0369a1;
+}
+
+/* sensible defaults when no data-theme set (follow OS preference) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --app-bg: #071123;
+    --app-text: #e6eef8;
+    --muted: #9fb0c9;
+    --card-bg: #071a2a;
+    --card-border: rgba(230,238,248,0.04);
+    --badge-bg: rgba(230,238,248,0.06);
+    --badge-text: #e6eef8;
+    --link-bg: rgba(12, 74, 110, 0.12);
+    --link-text: #7dd3fc;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --app-bg: #f8fafc;
+    --app-text: #0f172a;
+    --muted: #64748b;
+    --card-bg: #ffffff;
+    --card-border: rgba(2,6,23,0.04);
+  }
+}
+
+/* Apply to body so most pages inherit sensible colors */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--app-bg, #f8fafc);
+  color: var(--app-text, #0f172a);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+/* make cards and sections use the card bg when appropriate */
+.card, .project-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--card-border, rgba(2,6,23,0.04));
+}
+
+/* accessible text utilities */
+.muted { color: var(--muted); }
+
+.badge {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+}
+
+.link-pill {
+  background: var(--link-bg);
+  color: var(--link-text);
+}
 /* You can add global styles to this file, and also import other style files */

@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
         <h1 id="about-title">About Me</h1>
         <p class="lead">
           I'm a Software Developer with experience on both ends of the stack,
-          focused on providing meaningful, genuine contributions to colleagues,
-          stakeholders, and end-users.
+          specialized in front-end development, focused on providing meaningful,
+          genuine contributions to colleagues, stakeholders, and end-users.
         </p>
 
         <ul class="tech-list" aria-label="Technologies">
@@ -68,7 +68,7 @@ import { CommonModule } from '@angular/common';
         padding: 1rem;
         font-family: system-ui, -apple-system, 'Segoe UI', Roboto,
           'Helvetica Neue', Arial;
-        color: #111827;
+        color: var(--app-text);
         text-align: center;
       }
       h1 {
@@ -77,7 +77,7 @@ import { CommonModule } from '@angular/common';
       }
       .lead {
         font-size: 1rem;
-        color: #374151;
+        color: var(--muted);
         margin: 0 0 1rem 0;
         line-height: 1.6;
       }
@@ -91,8 +91,8 @@ import { CommonModule } from '@angular/common';
         margin: 0.5rem 0 0 0;
       }
       .tech-list li {
-        background: #eef2ff;
-        color: #0f172a;
+        background: var(--badge-bg);
+        color: var(--badge-text);
         padding: 0.4rem 0.65rem;
         border-radius: 9999px;
         font-size: 0.875rem;
